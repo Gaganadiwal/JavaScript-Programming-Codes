@@ -5,4 +5,4 @@ function celsiusToFahrenheit(celsius) {
 
 var celsius = 30;
 var fahrenheit = celsiusToFahrenheit(celsius);
-console.log(celsius + "°C is equal to " + fahrenheit + "°F");
+console.log(celsius + "°C is equal to " + fahrenheit + "°F"); 
