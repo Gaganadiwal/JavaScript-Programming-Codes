@@ -1,0 +1,75 @@
+{
+    "items":[
+        {
+            "sys": {"id":1},
+            "field":{
+                "title": "Python Programming Master-Course",
+                "price": 123.99,
+                "image":{"field":{"file":{"url":"C:/Users/gdeep/OneDrive/Downloads/_3d50bff8-0749-47bd-b009-455bb1a0fa01.jpeg"}}}
+            }
+        },
+
+        {
+            "sys": {"id":2},
+            "field":{
+                "title": "C++ Master-Course",
+                "price": 110.99,
+                "image":{"field":{"file":{"url":"C:/Users/gdeep/OneDrive/Downloads/_2fc866e7-c0f0-4b01-a833-fa39b98de0c7.jpeg"}}}
+            }
+        },
+
+        {
+            "sys": {"id":3},
+            "field":{
+                "title": "Web Development for Beginner Course",
+                "price": 99.99,
+                "image":{"field":{"file":{"url":"C:/Users/gdeep/OneDrive/Downloads/Leonardo_Diffusion_XL_cartoon_pixels_background_with_any_charc_3 (1).jpg"}}}
+            }
+        },
+
+        {
+            "sys": {"id":4},
+            "field":{
+                "title": "Java Programming Master-Course",
+                "price": 149.99,
+                "image":{"field":{"file":{"url":"C:/Users/gdeep/OneDrive/Downloads/_350536b7-d4fe-4f95-885c-3510a40ed44b.jpeg"}}}
+            }
+        },
+
+        {
+            "sys": {"id":5},
+            "field":{
+                "title": "Digital Marketing-Course",
+                "price": 199.99,
+                "image":{"field":{"file":{"url":"C:/Users/gdeep/OneDrive/Downloads/studying.png"}}}
+            }
+        },
+
+        {
+            "sys": {"id":6},
+            "field":{
+                "title": "Advanced Python Programming Master-Course",
+                "price": 199.99,
+                "image":{"field":{"file":{"url":"C:/Users/gdeep/OneDrive/Downloads/study (7).png"}}}
+            }
+        },
+
+        {
+            "sys": {"id":7},
+            "field":{
+                "title": "Data Structure and Algorithms Full Course",
+                "price": 99.99,
+                "image":{"field":{"file":{"url":"C:/Users/gdeep/OneDrive/Downloads/study (6).png"}}}
+            }
+        },
+
+        {
+            "sys": {"id":8},
+            "field":{
+                "title": "Data Science",
+                "price": 149.99,
+                "image":{"field":{"file":{"url":"C:/Users/gdeep/OneDrive/Downloads/open-book.png"}}}
+            }
+        }
+    ]
+}

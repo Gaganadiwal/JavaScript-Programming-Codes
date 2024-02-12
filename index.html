@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Quiz Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .quiz-container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .question-container {
+            margin-bottom: 20px;
+        }
+        
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        options {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .option {
+            padding: 8px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .option:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .result-container {
+            display: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 8px;
+        }
+        
+        .correct-answer {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        
+        .wrong-answer {
+            background-color: #ff3333;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="question-container" class="question-container">
+            <!-- Questions will be dynamically added here using JavaScript -->
+        </div>
+        <div id="result-container" class="result-container">
+            <!-- User's results will be displayed here -->
+        </div>
+    </div>
+    <script>
+        const quizContainer = document.getElementById('question-container');
+const resultContainer = document.getElementById('result-container');
+
+const questions = [
+    {
+        question: 'What is the capital of France?',
+        options: ['Paris', 'Berlin', 'London', 'Madrid'],
+        correctAnswer: 'Paris'
+    },
+    {
+        question: 'Which planet is known as the Red Planet?',
+        options: ['Earth', 'Mars', 'Jupiter', 'Venus'],
+        correctAnswer: 'Mars'
+    },
+    // Add more questions as needed
+];
+
+function startQuiz() {
+    questions.forEach((question, index) => {
+        const questionElement = document.createElement('div');
+        questionElement.classList.add('quiz-container');
+
+        questionElement.innerHTML = `
+            <p>${index + 1}. ${question.question}</p>
+            <div class="options">
+                ${question.options.map(option => `<div class="option" onclick="checkAnswer(this, '${option}', '${question.correctAnswer}')">${option}</div>`).join('')}
+            </div>
+        `;
+
+        quizContainer.appendChild(questionElement);
+    });
+}
+
+function checkAnswer(element, userAnswer, correctAnswer) {
+    const resultElement = document.createElement('div');
+    resultElement.classList.add('result-container');
+
+    if (userAnswer === correctAnswer) {
+        resultElement.classList.add('correct-answer');
+        resultElement.innerText = 'Correct!';
+    } else {
+        resultElement.classList.add('wrong-answer');
+        resultElement.innerText = `Wrong! The correct answer is ${correctAnswer}.`;
+    }
+
+    resultContainer.innerHTML = '';
+    resultContainer.appendChild(resultElement);
+
+    // Disable further clicking on options after answering
+    const options = element.parentElement.getElementsByClassName('option');
+    Array.from(options).forEach(option => {
+        option.style.pointerEvents = 'none';
+    });
+}
+
+startQuiz();
+
+
+    </script>
+</body>
+</html>
